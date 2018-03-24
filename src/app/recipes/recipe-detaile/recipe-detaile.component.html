@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-sx-12">
+        <img [src]="recipe.imagePath" alt={{recipe.name}} style="max-height:300px;">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sx-12">
+        <h3>{{recipe.name}}</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sx-12">
+        <div class="'btn-group" appDropdown>
+            <button type="button" class="btn btn-primary dropdown-toggle">Mangage
+        <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a style="cursor:pointer">to shopping List</a></li>
+                <li><a style="cursor:pointer" (click)="onEditRecipe()">Edit</a></li>
+                <li><a style="cursor:pointer">delete Recipe</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sx-12">
+        <h4>{{recipe.description}}</h4>
+    </div>
+</div>
