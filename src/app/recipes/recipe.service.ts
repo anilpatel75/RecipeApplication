@@ -1,8 +1,10 @@
+import { Subject } from 'rxjs/Subject';
 import {Recipe} from './recipe.model';
 import { EventEmitter } from '@angular/core';
 export class RecipeService
 {
-    reciepeAdded = new EventEmitter<Recipe>();
+    reciepeAdded = new EventEmitter<Recipe[]>();
+     editRecipe = new Subject<number>();
 
 
     public recipes: Recipe[] =[
@@ -18,5 +20,26 @@ export class RecipeService
     {
        return this.recipes[index];
     }
+    addRecipe(recipe:Recipe)
+    {
+        this.recipes.push(recipe);
+        this.reciepeAdded.emit(this.recipes.slice());
+    }
+    editRecipes(index:number)
+    {
+     return this.recipes[index];
+      
+    }
+     updateRecipe(index:number, recipe:Recipe)
+     {
+          this.recipes[index] = recipe;
+          this.reciepeAdded.emit(this.recipes.slice())
+     }
+     onDeleteRecipe(index:number)
+     {
+         this.recipes.splice(index,1);
+         this.reciepeAdded.emit(this.recipes.slice());
+     }
+
 
 }

@@ -15,6 +15,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
 import { AppRouting } from './app-routing.module';
 import { SelectRecipeComponent } from './recipes/select-recipe/select-recipe.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
  
 @NgModule({
@@ -33,6 +34,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRouting
   ],
   providers: [IngredientService],

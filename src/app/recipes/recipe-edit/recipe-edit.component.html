@@ -1,1 +1,42 @@
-<h2>Hello Recipe edit</h2>
+<div class="row">
+    <div class="col-sx-12">
+        <form [formGroup]="recipeForm" (ngSubmit)="onselected()" > 
+            <div class="row">
+                <div class="col-md-12 form-group ">
+                    <label for="name"><h3>Name</h3></label>
+                    <input type="text" 
+                    id="name" 
+                    class="form-control" 
+                  formControlName="name"
+                  >
+                </div>
+                <div class="col-md-12 form-group ">
+                    <label for="amount"><h3>imagePath</h3></label>
+                    <input type="text" 
+                    id="amount" 
+                    class="form-control"
+                    formControlName="imagePath"
+                  >
+                     
+                </div>
+                <div class="col-md-12 form-group ">
+                    <label for="amount"><h3>Detaile</h3></label>
+                    <input type="text" 
+                    id="amount" 
+                    class="form-control"
+                    formControlName= "description"
+                     >
+                     
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sx-12 form-group">
+                    <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid">{{editMode ? 'save':'Add'}}</button>
+                   <button type="button" class="btn btn-primary"   (click)="onClear()">clear</button>
+
+
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
