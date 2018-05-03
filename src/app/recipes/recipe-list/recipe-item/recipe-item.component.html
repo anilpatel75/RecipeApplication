@@ -1,20 +1,15 @@
-<a [routerLink]="[index]" routerLinkActive="active" class="list-group-item  clearfix;" style="height:100px; color:blueviolet">
+<a [routerLink]= "[in]" routerLinkActive="active" 
+class="list-group-item  clearfix;" style="height:150px; 
+color:blueviolet">
     <div class="pull-left">
         <h4 class="list-group-item-heading">
             {{recipe.name}}
         </h4>
-
         <p class="list-group-item-text">
             {{recipe.description}}
         </p>
-
-
-    </div>
-
+    </div> 
     <div class="pull-right">
-        <img src={{recipe.imagePath}} alt="{{recipe.name}}" class="img-responsive" style="max-height:50px;">
+        <img src={{recipe.imagePath}} alt="{{recipe.name}}" class="img-responsive" style="max-height:70px;">
     </div>
-
-
-
 </a>

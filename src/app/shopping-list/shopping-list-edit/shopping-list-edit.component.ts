@@ -14,7 +14,7 @@ export class ShoppingListEditComponent implements OnInit {
      editModeIndex:number;
      editItem:any =[];
   constructor(private shopingservice: IngredientService) { }
-
+  
   ngOnInit() 
    {
      this.shopingservice.editStarted.subscribe

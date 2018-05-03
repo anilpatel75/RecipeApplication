@@ -1,12 +1,11 @@
-<div class="row">
-    <div class="col-sx-12">
-        <img [src]="recipe.imagePath" alt={{recipe.name}} style="max-height:300px;">
-    </div>
-</div>
 
-<div class="row">
+<div class="row" >
     <div class="col-sx-12">
-        <h3>{{recipe.name}}</h3>
+        <h3 style="text-align: center">{{recipe.name}}</h3>
+    </div>
+</div><div class="row">
+    <div class="col-sx-12">
+        <img [src]="recipe.imagePath" alt={{recipe.name}} style="max-height:400px;">
     </div>
 </div>
 <div class="row">
@@ -15,16 +14,15 @@
             <button type="button" class="btn btn-primary dropdown-toggle">Mangage
         <span class="caret"></span></button>
             <ul class="dropdown-menu">
-                <li><a style="cursor:pointer">to shopping List</a></li>
-                <li><a style="cursor:pointer" (click)="onEditRecipe()">Edit</a></li>
-                <li><a style="cursor:pointer" (click)="deleteRecipe()">delete Recipe</a></li>
+                 <li><a style="cursor:pointer" (click)="onEditRecipe()">Edit</a></li>
+                <li><a style="cursor:pointer" (click)="deleteRecipe()">DeleteRecipe</a></li>
 
             </ul>
         </div>
     </div>
 </div>
-<div class="row">
+<div class="row right">
     <div class="col-sx-12">
-        <h4>{{recipe.description}}</h4>
+        <h4 style="margin-top: -26px;">{{recipe.description}}</h4>
     </div>
 </div>

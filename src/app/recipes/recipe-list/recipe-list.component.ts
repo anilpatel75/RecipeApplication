@@ -13,27 +13,21 @@ import { Router } from '@angular/router';
 
 })
 export class RecipeListComponent implements OnInit {
-
    recipes: Recipe[];
-
-
-  constructor(private recipeService: RecipeService,
-    private route:ActivatedRoute,private router:Router) { }
+    constructor(private recipeService: RecipeService,
+    private route:ActivatedRoute,
+    private router:Router) { }
 
    ngOnInit()
     {
-      this.recipes = this.recipeService.getReciepe();
-      this.recipeService.reciepeAdded.subscribe((recipe)=>
-    {
-      this.recipes = recipe;
-    })
+       this.recipes = this.recipeService.getReciepe();
+       this.recipeService.reciepeAdded.subscribe(
+                   (recipe)=>{
+                    this.recipes = recipe;
+                  })
     }
     onSelected()
     {
       this.router.navigate(['new'],{relativeTo: this.route} );
     }
-   
-
-    
-
 }

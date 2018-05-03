@@ -11,19 +11,8 @@ import {Recipe} from '../../recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Input() index: number;
- 
-
-  // constructor(private recipeService: RecipeService) { }
-
+  @Input() in: number;
   ngOnInit()
-   {
-   }
+   {}
     
-  // onSelected()
-  //  {
-  //  this.recipeService.reciepeAdded.emit(this.recipe);
-  //  }
-
-
-}
+ }

@@ -1,3 +1,4 @@
+import { HomeComponent } from './home/home.component';
 import { RecipeDetaileComponent } from './recipes/recipe-detaile/recipe-detaile.component';
 import { SelectRecipeComponent } from './recipes/select-recipe/select-recipe.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
@@ -7,14 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
  
 const appRoutes: Routes = [
-    {path:'recipes' , component:RecipesComponent, 
-    children:[
-        {path:'', component:SelectRecipeComponent},
-        {path:'new', component:RecipeEditComponent},
-        {path:':id', component:RecipeDetaileComponent},
-        {path:':id/edit', component:RecipeEditComponent}
-       
-      ]},
+     {path:'' ,component:HomeComponent},
     {path:'shopping-list' , component: ShoppingListComponent}
 ];
  

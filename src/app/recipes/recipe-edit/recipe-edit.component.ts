@@ -1,6 +1,6 @@
 import { RecipeService } from './../recipe.service';
 import { Recipe } from './../recipe.model';
-import { NgForm, FormGroup, FormControl } from '@angular/forms';
+import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit,ViewChild } from '@angular/core';
 import { ActivatedRoute ,Params } from '@angular/router';
 
@@ -29,8 +29,7 @@ constructor( private route: ActivatedRoute ,private recipeservice:RecipeService)
         this.editMode = params['id'] != null;
         this.initForm();
       });
-     
-  }
+    }
   private initForm() 
      {
        let recipeName ='';
@@ -44,9 +43,9 @@ constructor( private route: ActivatedRoute ,private recipeservice:RecipeService)
         recipeDescription = recipe.description;
        }
          this.recipeForm = new FormGroup({
-        'name': new FormControl(recipeName),
-        'imagePath':new FormControl(recipeImagePath),
-         'description':new FormControl(recipeDescription)
+        'name': new FormControl(recipeName,Validators.required),
+        'imagePath':new FormControl(recipeImagePath,Validators.required),
+         'description':new FormControl(recipeDescription,Validators.required)
         })
     }  
 
