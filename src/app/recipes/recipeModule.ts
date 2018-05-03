@@ -19,12 +19,11 @@ import { RecipeRouting } from './recipe-Routing';
         SelectRecipeComponent,
         RecipesComponent
      ],
-     imports:[CommonModule,
+     imports:[
+         CommonModule,
          ReactiveFormsModule,
          RecipeRouting
         ]
-})
+    })
 export class recipeModule
-{
-
-}
+{}

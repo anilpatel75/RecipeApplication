@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { recipeModule } from './recipes/recipeModule';
 import { HomeComponent } from './home/home.component';
 import { ShoppingListModule } from './shopping-list/shoppingListModule';
+import { RecipeService } from './recipes/recipe.service';
 
 
 
@@ -28,7 +29,7 @@ import { ShoppingListModule } from './shopping-list/shoppingListModule';
     AppRouting
    
   ],
-  providers: [IngredientService],
+  providers: [IngredientService ,RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

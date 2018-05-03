@@ -11,8 +11,10 @@ import {Recipe} from '../../recipe.model';
 })
 export class RecipeItemComponent implements OnInit {
   @Input() recipe: Recipe;
-  @Input() in: number;
+  @Input() index: number;
   ngOnInit()
-   {}
+   {
+     console.log(this.recipe)
+   }
     
  }
