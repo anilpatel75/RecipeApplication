@@ -8,11 +8,11 @@ export class RecipeService
 
 
     public recipes: Recipe[] =[
-        new Recipe('Recipe','This is My FirstRecipe',
+        new Recipe('Recipe 1','FirstRecipe',
         'http://www.ndtv.com/cooks/images/chicken-chettinad_620.jpg'),
-        new Recipe('TestRcipe','This is My SecondRecipe',
+        new Recipe('Recipe 2',' SecondRecipe',
         'http://www.ndtv.com/cooks/images/chicken-chettinad_620.jpg'),
-        new Recipe('Anil TestRcipe','This is My ThirdRecipe',
+        new Recipe('Recipe 3',' ThirdRecipe',
         'http://www.ndtv.com/cooks/images/chicken-chettinad_620.jpg')
     ];
     getReciepe()

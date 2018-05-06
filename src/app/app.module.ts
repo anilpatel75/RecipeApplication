@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { DropdownDirective } from './shared/dropdown.directive';
 import { AppRouting } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { recipeModule } from './recipes/recipeModule';
+import { recipeModule } from './recipes/recipe.Module';
 import { HomeComponent } from './home/home.component';
 import { ShoppingListModule } from './shopping-list/shoppingListModule';
 import { RecipeService } from './recipes/recipe.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -18,15 +18,17 @@ import { RecipeService } from './recipes/recipe.service';
   declarations: [
     AppComponent,
     HeaderComponent,
-    DropdownDirective,
-    HomeComponent,
+    HomeComponent
    
   ],
   imports: [
     BrowserModule,
-    recipeModule,
-    ShoppingListModule, 
-    AppRouting
+     AppRouting,
+     recipeModule,
+     ShoppingListModule,
+     BrowserAnimationsModule
+     
+   
    
   ],
   providers: [IngredientService ,RecipeService],

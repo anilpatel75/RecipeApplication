@@ -1,21 +1,17 @@
-import { Component, OnInit ,Output,EventEmitter } from '@angular/core';
+import { fadeInAnimation } from './../animation';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  animations: [fadeInAnimation],
+   host: { '[@fadeInAnimation]': '' }
+ 
 })
-export class HeaderComponent implements OnInit {
-    @Output() lodedFeatures = new EventEmitter<string>();
-
-
-  constructor() { }
-
-  ngOnInit() {
+export class HeaderComponent {
+  onclick()
+  {
+    console.log("hello there")
   }
-    onSelect(fatures: string)
-    {
-      this.lodedFeatures.emit(fatures);
-    }
-
-}
+ }

@@ -6,10 +6,13 @@ import { Component, NgModule } from '@angular/core';
 import { RecipesComponent } from './recipes/recipes.component';
 import { Routes, RouterModule } from '@angular/router';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { recipeModule } from './recipes/recipe.Module';
  
 const appRoutes: Routes = [
-     {path:'' ,component:HomeComponent},
-    {path:'shopping-list' , component: ShoppingListComponent}
+     {path:'',component: HomeComponent},
+     {path:'recipes',loadChildren: () => recipeModule},
+    {path:'shopping-list', component: ShoppingListComponent}
+   
 ];
  
 @NgModule({
