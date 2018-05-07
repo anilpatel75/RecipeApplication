@@ -15,7 +15,6 @@ export class HomeComponent implements OnInit{
   counter:number = 0;
   dailyData:any =[];
   state:string = 'inactive';
- 
   images=[
   "assets/images/bady-qb-490119-unsplash.jpg",
   "assets/images/chinh-le-duc-264152-unsplash.jpg",
@@ -24,23 +23,13 @@ export class HomeComponent implements OnInit{
   "assets/images/peter-wendt-123928-unsplash.jpg",
   "assets/images/igor-ovsyannykov-458022-unsplash.jpg"
 ]
-
-
-
-  ngOnInit(){
+ngOnInit(){
     this.imagesrc = this.images[0];
-    setInterval(()=> {this.myfunction(this.images);}, 3000)
-   
-  }
-  ngOnChages()
-  {
-   
-  }
-
-  setTheValue(valueX) {
+    setInterval(()=> {this.myfunction(this.images)},2000)
+   }
+   setTheValue(valueX) {
     this.imagesrc = valueX;
   }
-
   onClickRight()
   {  this.onMouseOver();
       if( this.counter<this.images.length-1)
@@ -58,30 +47,25 @@ export class HomeComponent implements OnInit{
        this.counter--;
        this.imagesrc = this.images[this.counter]
     }
- }
+ }  
   onMouseOver()
 {
   this.state === 'active' ? this.state ='inactive' :this.state = 'active';
 }
- 
- 
-  // slideshow  for  main page
-  myfunction(bh)
-  {     //generating random number
-      let imgSrc = "";
+ // slideshow  for  main page
+  myfunction(SlideData)
+  {     
+    let imgSrc = "";
         function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min; 
       }
-      function fff(){
-        imgSrc = bh[getRandomIntInclusive(0,bh.length-1)];
-        console.log(imgSrc)
+      function reandomImage(){
+        imgSrc = SlideData[getRandomIntInclusive(0,SlideData.length-1)];
         return imgSrc
       }
-      
-      this.setTheValue(fff());
-     // console.log(this.imagesrc)
+      this.setTheValue(reandomImage());
   }
 }
 

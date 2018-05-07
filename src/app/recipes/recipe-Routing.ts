@@ -6,7 +6,7 @@ import { SelectRecipeComponent } from '../recipes/select-recipe/select-recipe.co
 import { RecipeEditComponent } from '../recipes/recipe-edit/recipe-edit.component';
 import { RecipeDetaileComponent } from '../recipes/recipe-detaile/recipe-detaile.component';
  const recipeRoute:Routes =[
-    {path:'', component:RecipesComponent, 
+    {path:'recipes', component:RecipesComponent, 
     children:[
         {path:'', component:SelectRecipeComponent},
         {path:'new', component:RecipeEditComponent},

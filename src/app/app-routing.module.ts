@@ -10,8 +10,8 @@ import { recipeModule } from './recipes/recipe.Module';
  
 const appRoutes: Routes = [
      {path:'',component: HomeComponent},
-     {path:'recipes',loadChildren: () => recipeModule},
-    {path:'shopping-list', component: ShoppingListComponent}
+    
+      {path:'shopping-list', component: ShoppingListComponent}
    
 ];
  
